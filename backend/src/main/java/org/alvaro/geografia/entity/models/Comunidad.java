@@ -16,29 +16,29 @@ public class Comunidad implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idComunidad;
+	private int idcomunidad;
 	private String nombre;
 	private int poblacion;
 	private int superficie;
-	private Provincia fkPostal;
+	private Provincia fkpostal;
 	
-	public Comunidad(int idComunidad, String nombre, int poblacion, int superficie, Provincia fkPostal) {
+	public Comunidad(int idcomunidad, String nombre, int poblacion, int superficie, Provincia fkpostal) {
 		super();
-		this.idComunidad = idComunidad;
+		this.idcomunidad = idcomunidad;
 		this.nombre = nombre;
 		this.poblacion = poblacion;
 		this.superficie = superficie;
-		this.fkPostal = fkPostal;
+		this.fkpostal = fkpostal;
 	}
 	
 	public Comunidad(){}
 
 	public int getIdComunidad() {
-		return idComunidad;
+		return idcomunidad;
 	}
 
-	public void setIdComunidad(int idComunidad) {
-		this.idComunidad = idComunidad;
+	public void setIdComunidad(int idcomunidad) {
+		this.idcomunidad = idcomunidad;
 	}
 
 	public String getNombre() {
@@ -66,11 +66,11 @@ public class Comunidad implements Serializable{
 	}
 
 	public Provincia getFkPostal() {
-		return fkPostal;
+		return fkpostal;
 	}
 
-	public void setFkPostal(Provincia fkPostal) {
-		this.fkPostal = fkPostal;
+	public void setFkPostal(Provincia fkpostal) {
+		this.fkpostal = fkpostal;
 	}
 	
 	

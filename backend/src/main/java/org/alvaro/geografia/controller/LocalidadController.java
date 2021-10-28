@@ -31,8 +31,8 @@ public class LocalidadController {
 			return localidadService.getAll();
 		}
 
-		@GetMapping("/localidad/{idLocalidad}")
-		Localidad getOne(@PathVariable("idLocalidad") int id) {
+		@GetMapping("/localidad/{idlocalidad}")
+		Localidad getOne(@PathVariable("idlocalidad") int id) {
 			Optional<Localidad> l = localidadService.getOne(id);
 
 			if(l.isPresent()) {
@@ -63,8 +63,8 @@ public class LocalidadController {
 			}
 		}
 
-		@DeleteMapping("/localidad/{idLocalidad}")
-		void delete(@PathVariable("idLocalidad") int id) {
+		@DeleteMapping("/localidad/{idlocalidad}")
+		void delete(@PathVariable("idlocalidad") int id) {
 			System.out.println(id);
 			localidadService.delete(id);
 		}

@@ -16,29 +16,29 @@ public class Provincia implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int codPostal;
+	private int codpostal;
 	private String nombre;
 	private int poblacion;
 	private String superficie;
-	private Localidad fkLocalidad;
+	private Localidad fklocalidad;
 	
-	public Provincia(int codPostal, String nombre, int poblacion, String superficie, Localidad fkLocalidad) {
+	public Provincia(int codpostal, String nombre, int poblacion, String superficie, Localidad fklocalidad) {
 		super();
-		this.codPostal = codPostal;
+		this.codpostal = codpostal;
 		this.nombre = nombre;
 		this.poblacion = poblacion;
 		this.superficie = superficie;
-		this.fkLocalidad = fkLocalidad;
+		this.fklocalidad = fklocalidad;
 	}
 	
 	public Provincia(){}
 
 	public int getCodPostal() {
-		return codPostal;
+		return codpostal;
 	}
 
-	public void setCodPostal(int codPostal) {
-		this.codPostal = codPostal;
+	public void setCodPostal(int codpostal) {
+		this.codpostal = codpostal;
 	}
 
 	public String getNombre() {
@@ -66,11 +66,11 @@ public class Provincia implements Serializable{
 	}
 
 	public Localidad getFkLocalidad() {
-		return fkLocalidad;
+		return fklocalidad;
 	}
 
-	public void setFkLocalidad(Localidad fkLocalidad) {
-		this.fkLocalidad = fkLocalidad;
+	public void setFkLocalidad(Localidad fklocalidad) {
+		this.fklocalidad = fklocalidad;
 	}
 	
 }

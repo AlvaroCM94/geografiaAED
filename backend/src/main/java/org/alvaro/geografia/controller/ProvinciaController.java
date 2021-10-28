@@ -32,8 +32,8 @@ public class ProvinciaController {
 			return provinciaService.getAll();
 		}
 
-		@GetMapping("/provincia/{codPostal}")
-		Provincia getOne(@PathVariable("codPostal") int id) {
+		@GetMapping("/provincia/{codpostal}")
+		Provincia getOne(@PathVariable("codpostal") int id) {
 			Optional<Provincia> l = provinciaService.getOne(id);
 
 			if(l.isPresent()) {
@@ -64,8 +64,8 @@ public class ProvinciaController {
 			}
 		}
 
-		@DeleteMapping("/provincia/{codPostal}")
-		void delete(@PathVariable("codPostal") int id) {
+		@DeleteMapping("/provincia/{codpostal}")
+		void delete(@PathVariable("codpostal") int id) {
 			System.out.println(id);
 			provinciaService.delete(id);
 		}

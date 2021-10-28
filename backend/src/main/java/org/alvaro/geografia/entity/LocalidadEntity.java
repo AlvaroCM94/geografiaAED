@@ -5,18 +5,18 @@ import javax.persistence.*;
 @Entity
 @Table(name = "localidad", schema = "geografia", catalog = "")
 public class LocalidadEntity {
-    private int idLocalidad;
+    private int idlocalidad;
     private String nombre;
     private int poblacion;
 
     @Id
-    @Column(name = "idLocalidad", nullable = false)
+    @Column(name = "idlocalidad", nullable = false)
     public int getIdLocalidad() {
-        return idLocalidad;
+        return idlocalidad;
     }
 
-    public void setIdLocalidad(int idLocalidad) {
-        this.idLocalidad = idLocalidad;
+    public void setIdLocalidad(int idlocalidad) {
+        this.idlocalidad = idlocalidad;
     }
 
     @Basic
@@ -46,7 +46,7 @@ public class LocalidadEntity {
 
         LocalidadEntity that = (LocalidadEntity) o;
 
-        if (idLocalidad != that.idLocalidad) return false;
+        if (idlocalidad != that.idlocalidad) return false;
         if (poblacion != that.poblacion) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
 
@@ -55,7 +55,7 @@ public class LocalidadEntity {
 
     @Override
     public int hashCode() {
-        int result = idLocalidad;
+        int result = idlocalidad;
         result = 31 * result + (nombre != null ? nombre.hashCode() : 0);
         result = 31 * result + poblacion;
         return result;

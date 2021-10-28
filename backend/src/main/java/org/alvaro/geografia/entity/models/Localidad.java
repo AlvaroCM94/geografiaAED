@@ -16,13 +16,13 @@ public class Localidad implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idLocalidad;
+	private int idlocalidad;
 	private String nombre;
 	private int poblacion;
 	
-	public Localidad(int idLocalidad, String nombre, int poblacion) {
+	public Localidad(int idlocalidad, String nombre, int poblacion) {
 		super();
-		this.idLocalidad = idLocalidad;
+		this.idlocalidad = idlocalidad;
 		this.nombre = nombre;
 		this.poblacion = poblacion;
 	}
@@ -30,11 +30,11 @@ public class Localidad implements Serializable{
 	public Localidad(){}
 
 	public int getIdLocalidad() {
-		return idLocalidad;
+		return idlocalidad;
 	}
 
-	public void setIdLocalidad(int idLocalidad) {
-		this.idLocalidad = idLocalidad;
+	public void setIdLocalidad(int idlocalidad) {
+		this.idlocalidad = idlocalidad;
 	}
 
 	public String getNombre() {

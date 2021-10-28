@@ -31,8 +31,8 @@ public class ComunidadController {
 			return comunidadService.getAll();
 		}
 
-		@GetMapping("/comunidadautonoma/{idComunidad}")
-		Comunidad getOne(@PathVariable("idComunidad") int id) {
+		@GetMapping("/comunidadautonoma/{idcomunidad}")
+		Comunidad getOne(@PathVariable("idcomunidad") int id) {
 			Optional<Comunidad> l = comunidadService.getOne(id);
 
 			if(l.isPresent()) {
@@ -63,8 +63,8 @@ public class ComunidadController {
 			}
 		}
 
-		@DeleteMapping("/comunidadautonoma/{idComunidad}")
-		void delete(@PathVariable("idComunidad") int id) {
+		@DeleteMapping("/comunidadautonoma/{idcomunidad}")
+		void delete(@PathVariable("idcomunidad") int id) {
 			System.out.println(id);
 			comunidadService.delete(id);
 		}
