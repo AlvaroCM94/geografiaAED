@@ -5,19 +5,19 @@ import javax.persistence.*;
 @Entity
 @Table(name = "provincia", schema = "geografia", catalog = "")
 public class ProvinciaEntity {
-    private int codPostal;
+    private int codpostal;
     private String nombre;
     private int poblacion;
     private int superficie;
 
     @Id
-    @Column(name = "codPostal", nullable = false)
+    @Column(name = "codpostal", nullable = false)
     public int getCodPostal() {
-        return codPostal;
+        return codpostal;
     }
 
-    public void setCodPostal(int codPostal) {
-        this.codPostal = codPostal;
+    public void setCodPostal(int codpostal) {
+        this.codpostal = codpostal;
     }
 
     @Basic
@@ -57,7 +57,7 @@ public class ProvinciaEntity {
 
         ProvinciaEntity that = (ProvinciaEntity) o;
 
-        if (codPostal != that.codPostal) return false;
+        if (codpostal != that.codpostal) return false;
         if (poblacion != that.poblacion) return false;
         if (superficie != that.superficie) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
@@ -67,7 +67,7 @@ public class ProvinciaEntity {
 
     @Override
     public int hashCode() {
-        int result = codPostal;
+        int result = codpostal;
         result = 31 * result + (nombre != null ? nombre.hashCode() : 0);
         result = 31 * result + poblacion;
         result = 31 * result + superficie;

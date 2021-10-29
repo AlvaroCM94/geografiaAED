@@ -30,8 +30,13 @@ public class ComunidadServiceImpl implements ComunidadService{
 	}
 
 	@Override
-	public void update(Comunidad comunidad, int id){
+	public void update(int id, Comunidad comunidad){
+		Optional<Comunidad> c = comunidadDao.findById(id);
 		
+		if (c.isPresent()) {
+			comunidad.setIdComunidad(id);
+			comunidadDao.save(comunidad);
+		}
 	}
 
 	@Override

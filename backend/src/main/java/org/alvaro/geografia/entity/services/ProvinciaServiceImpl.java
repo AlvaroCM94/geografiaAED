@@ -28,10 +28,15 @@ public class ProvinciaServiceImpl implements ProvinciaService{
 		provinciaDao.save(provincia);
 		
 	}
-
+	
 	@Override
-	public void update(Provincia provincia, int id){
+	public void update(int id, Provincia provincia){
+		Optional<Provincia> p = provinciaDao.findById(id);
 		
+		if (p.isPresent()) {
+			provincia.setCodPostal(id);
+			provinciaDao.save(provincia);
+		}
 	}
 
 	@Override

@@ -9,6 +9,6 @@ public interface ProvinciaService {
 	Optional<Provincia> getOne(int id);
 	List<Provincia> getAll();
 	void add(Provincia provincia);
-	void update(Provincia provincia, int id);
+	void update(int id, Provincia provincia);
 	void delete(int id);
 }

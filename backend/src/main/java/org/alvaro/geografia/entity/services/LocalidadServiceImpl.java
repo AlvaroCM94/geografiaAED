@@ -29,10 +29,15 @@ public class LocalidadServiceImpl implements LocalidadService{
 		localidadDao.save(localidad);
 		
 	}
-
+	
 	@Override
-	public void update(Localidad localidad, int id){
+	public void update(int id, Localidad localidad){
+		Optional<Localidad> l = localidadDao.findById(id);
 		
+		if (l.isPresent()) {
+			localidad.setIdLocalidad(id);
+			localidadDao.save(localidad);
+		}
 	}
 
 	@Override

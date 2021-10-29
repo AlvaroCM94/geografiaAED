@@ -9,6 +9,6 @@ public interface ComunidadService {
 	Optional<Comunidad> getOne(int id);
 	List<Comunidad> getAll();
 	void add(Comunidad comunidad);
-	void update(Comunidad comunidad, int id);
+	void update(int id, Comunidad comunida) ;
 	void delete(int id);
 }

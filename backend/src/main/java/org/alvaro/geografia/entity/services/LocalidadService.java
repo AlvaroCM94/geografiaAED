@@ -9,6 +9,7 @@ public interface LocalidadService {
 	Optional<Localidad> getOne(int id);
 	List<Localidad> getAll();
 	void add(Localidad localidad);
-	void update(Localidad localidad, int id);
+	//void update(Localidad localidad, int id);
+	void update(int id, Localidad localidad);
 	void delete(int id);
 }
